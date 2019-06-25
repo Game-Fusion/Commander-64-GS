@@ -4,6 +4,9 @@ os.pullEvent = os.pullEventRaw -- prevent CTRL+T
 
 local w, h = term.getSize()
 
+local current = term.current()
+term.redirect(window.create(current,1,1,current.getSize()))
+
 function center(y, string)
   local x = (w / 2) - (#string / 2)
   term.setCursorPos(x, y)
@@ -34,8 +37,6 @@ term.setTextColour = term.setTextColor
 
   term.setBackgroundColour(colours.black)
   term.clear()
-  
-  -- initialise
   term.setBackgroundColour(colours.white)
   paintutils.drawBox(1, 1, w, h)
   paintutils.drawBox(2, 2, w-1, h-1)
@@ -49,7 +50,6 @@ end
 local function bootAdvanced()
   term.setBackgroundColour(colours.pink)
   term.clear()
-  
   term.setBackgroundColour(colours.blue)
   paintutils.drawBox(1, 1, w, h)
   paintutils.drawBox(2, 2, w-1, h-1)
