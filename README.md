@@ -8,7 +8,6 @@ The Commander 64 Games System is an all-new system inspired by the successful an
 - Support for Commander 64 games (and programs) as well as native titles
 - Supports updating the console to new firmware revisions using an update disk and official install software
 - Only 99 lines long!
-- Publicly available, open source and simple software development kit
 - Support for advanced **and** monochrome computers!
 
 And more!
