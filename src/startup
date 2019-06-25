@@ -4,7 +4,7 @@ os.pullEvent = os.pullEventRaw -- prevent CTRL+T
 
 local w, h = term.getSize()
 
-local function center(y, string)
+function center(y, string)
   local x = (w / 2) - (#string / 2)
   term.setCursorPos(x, y)
   print(string)
