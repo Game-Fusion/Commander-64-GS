@@ -7,12 +7,13 @@ local w, h = term.getSize()
 local current = term.current()
 term.redirect(window.create(current,1,1,current.getSize()))
 
-function center(y, string)
+local function center(y, string)
   local x = (w / 2) - (#string / 2)
   term.setCursorPos(x, y)
   print(string)
 end
 
+-- separate function due to colour wrapper
 local function bootStandard()
   local oldback = term.setBackgroundColour
   function term.setBackgroundColor(colour)
@@ -40,7 +41,6 @@ term.setTextColour = term.setTextColor
   term.setBackgroundColour(colours.white)
   paintutils.drawBox(1, 1, w, h)
   paintutils.drawBox(2, 2, w-1, h-1)
-  paintutils.drawBox(3, 3, w-2, h-2)
   term.setTextColour(colours.white)
   term.setBackgroundColour(colours.black)
   center(8, "*** COMMANDER 64 GAMES SYSTEM ***")
@@ -48,14 +48,12 @@ term.setTextColour = term.setTextColor
 end
 
 local function bootAdvanced()
-  term.setBackgroundColour(colours.pink)
+  term.setBackgroundColour(colours.purple)
   term.clear()
   term.setBackgroundColour(colours.blue)
   paintutils.drawBox(1, 1, w, h)
   paintutils.drawBox(2, 2, w-1, h-1)
-  paintutils.drawBox(3, 3, w-2, h-2)
   term.setTextColour(colours.white)
-  term.setBackgroundColour(colours.pink)
   center(8, "*** COMMANDER 64 GAMES SYSTEM ***")
   sleep(1)
 end
