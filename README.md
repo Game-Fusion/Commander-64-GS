@@ -20,4 +20,8 @@ Additionally, the C64GS allows you to develop games exclusively for the platform
 
 Developing games for the system is also incredibly uncomplicated; you make your game, name the executable as "run.gs" (or, if it is intended to be a C64 program, "run.c64") and place it on a disk! The benefit of using C64GS over C64 for games is the advanced computer support, allowing for colours to be used as well as including automatic monochrome support.
 
-We hope users enjoy C64GS as much as we do!
+## Installation
+
+C64GS can be obtained from this repository or from pastebin.
+
+The easiest way to install would be to run `pastebin get Z6XNdXzF startup` to save C64GS's v1.0 software to your computer as the startup program. 
