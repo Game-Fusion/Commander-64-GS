@@ -1,4 +1,4 @@
-local version = 1.0
+local version = 1.1
 
 os.pullEvent = os.pullEventRaw -- prevent CTRL+T
 
@@ -13,7 +13,6 @@ local function center(y, string)
   print(string)
 end
 
--- separate function due to colour wrapper
 local function bootStandard()
   local oldback = term.setBackgroundColour
   function term.setBackgroundColor(colour)
@@ -42,7 +41,7 @@ term.setTextColour = term.setTextColor
   paintutils.drawBox(1, 1, w, h)
   paintutils.drawBox(2, 2, w-1, h-1)
   term.setTextColour(colours.white)
-  term.setBackgroundColour(colours.black)
+  term.setBackgroundColour(colours.black) 
   center(8, "*** COMMANDER 64 GAMES SYSTEM ***")
   sleep(1)
 end
@@ -54,6 +53,7 @@ local function bootAdvanced()
   paintutils.drawBox(1, 1, w, h)
   paintutils.drawBox(2, 2, w-1, h-1)
   term.setTextColour(colours.white)
+  term.setBackgroundColour(colours.purple)
   center(8, "*** COMMANDER 64 GAMES SYSTEM ***")
   sleep(1)
 end
@@ -78,20 +78,10 @@ elseif fs.exists("/disk/run.gs") then
   center(12, "BOOTING...")
   sleep()
   shell.run("/disk/run.gs")
-
-elseif fs.exists("/disk/update.gs") then
-  center(10, "UPDATE DISK INSERTED.")
-  sleep(1)
-  center(11, "UPDATE COMMENCING IN 10 SECONDS.")
-  sleep(1)
-  center(12, "IF YOU DO NOT WANT TO UPDATE, PLEASE")
-  center(13, "SHUT DOWN (CTRL + S) YOUR SYSTEM.")
-  sleep(10)
-  shell.run("/disk/update.gs")
   
 else
   center(10, "PLEASE INSERT DISK.")
   sleep(1)
   
   end
-end  
+end
