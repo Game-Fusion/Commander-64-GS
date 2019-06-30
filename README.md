@@ -5,9 +5,9 @@ The Commander 64 Games System is an all-new system inspired by the successful an
 ## Features:
 
 - Minimalistic by nature; straight to the point, with no menus required!
-- Support for Commander 64 games (and programs) as well as native titles
+- Compatible with Commander 64 games and programs
 - Supports updating the console to new firmware revisions using an update disk and official install software
-- Only 97 lines long!
+- Less than 100 lines long!
 - Support for advanced **and** monochrome computers!
 
 And more!
@@ -24,4 +24,4 @@ Developing games for the system is also incredibly uncomplicated; you make your 
 
 C64GS can be obtained from this repository or from pastebin.
 
-The easiest way to install would be to run `pastebin get Z6XNdXzF startup` to save C64GS's v1.0 software to your computer as the startup program. 
+The easiest way to install would be to run `pastebin get ZXREDQDW startup` to save C64GS's v1.1 software to your computer as the startup program. 
